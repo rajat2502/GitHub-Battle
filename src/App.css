@@ -258,6 +258,14 @@ body {
     padding: 35px 50px;
     border-radius: 10px;
     margin-top: 20px;
+    width: 300px;
+}
+
+.player-result {
+    text-align: center;
+    margin-bottom: 16px;
+    color: brown;
+    font-weight: bolder;
 }
 
 .player-card img {
@@ -265,12 +273,22 @@ body {
     margin-bottom: 5px;
 }
 
+.score {
+    color: blue;
+    font-weight: bolder;
+    margin-top: 2px;
+}
+
+.score > span {
+    color: #6b94c0;
+}
+
 .player-login {
     color: blueviolet;
     font-weight: bolder;
     font-size: 1.6rem;
-    margin-top: 8px;
-    margin-bottom: 14px;
+    margin-top: 5px;
+    margin-bottom: 12px;
 }
 
 .player-login:hover {
@@ -278,7 +296,7 @@ body {
 }
 
 .player-card p {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 1.2rem;
 }
 

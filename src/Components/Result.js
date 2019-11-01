@@ -6,27 +6,30 @@ const Result = ({data1, data2, theme}) => {
 
     const [score1, setScore1] = useState(null);
     const [score2, setScore2] = useState(null);
-    // const [user1repo, setUser1repo] = useState({});
-    // const [user2repo, setUser2repo] = useState({});
 
     useEffect(() => {
         GitHub.getUserScore(data1.login)
-        .then(score => setScore1(score));
+        .then(score => setScore1(score+(data1.followers*3)));
 
         GitHub.getUserScore(data2.login)
-        .then(score => setScore2(score));
+        .then(score => setScore2(score+(data2.followers*3)));
     }, [])
 
     if(data1.login == null || data2.login == null) {
         return <h3 className="text-center mt-4">Please Enter Valid Github Users</h3>
     }
 
+    else if(score1==null || score2==null) {
+        return <h3 className="text-center mt-4">Battling...</h3>
+    }
+
     else {
         return (
             <div className="results">
                 <div className={`player-card ${theme}`}>
+                    <h2 className="player-result">{score1 > score2 ? 'Winner🥳' : (score1 == score2 ? 'Tie🙂' : 'Loser🙁')}</h2>
                     <img src={data1.avatar_url} alt={`${data1.login}'s avatar`} />
-                    <span className="score text-center">score={score1}</span>
+                    <span className="score text-center">score: <span>{score1}</span></span>
                     <a href={data1.html_url} className="player-login text-center">{data1.login}</a>
                     <p>
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" color="rgb(239, 115, 115)" size="22" height="22" width="22" style={{color: 'rgb(239, 115, 115)'}}>
@@ -67,8 +70,9 @@ const Result = ({data1, data2, theme}) => {
                 </div> 
                 
                 <div className={`player-card ${theme}`}>
+                    <h2 className="player-result">{score1 < score2 ? 'Winner🥳' : (score1 == score2 ? 'Tie🙂' : 'Loser🙁')}</h2>
                     <img src={data2.avatar_url} alt={`${data2.login}'s avatar`} />
-                    <span className="score text-center">score={score2}</span>
+                    <span className="score text-center">score: <span>{score2}</span></span>
                     <a href={data2.html_url} className="player-login text-center">{data2.login}</a>
                     <p>
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" color="rgb(239, 115, 115)" size="22" height="22" width="22" style={{color: 'rgb(239, 115, 115)'}}>
