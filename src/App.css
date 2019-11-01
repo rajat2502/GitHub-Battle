@@ -244,6 +244,48 @@ body {
     outline: none;
 }
 
+.results {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    background: lightgray;
+    padding: 35px 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.player-card img {
+    width: 180px;
+    margin-bottom: 5px;
+}
+
+.player-login {
+    color: blueviolet;
+    font-weight: bolder;
+    font-size: 1.6rem;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+.player-login:hover {
+    text-decoration: none;
+}
+
+.player-card p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.player-card svg {
+    margin-right: 10px;
+}
+
 .footer {
     display: flex;
     justify-content: center;

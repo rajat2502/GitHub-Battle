@@ -16,7 +16,7 @@ const NavBar = ({ handleTheme, theme }) => {
             {
                 arr.map((item, index) => {
                     return (
-                        <Link to={item === 'Popular' ? '/' : '/Battle'} key={index}>
+                        <Link to={item === 'Popular' ? '/' : '/battle'} key={index}>
                             <NavItem>
                                 <span className={selected === item ? 'selected' : ''} onClick={(e) => toggleSelected(e.target.textContent)} title={item}>{item}</span>
                             </NavItem>

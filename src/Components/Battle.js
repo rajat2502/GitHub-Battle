@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 
+import {Link} from 'react-router-dom';
+
 import Instructions from './Instructions';
 import GitHub from './GitHub/GitHub';
 
-const Battle = ({theme}) => {
+const Battle = ({theme, handlePlayersData}) => {
 
     const [player1, handlePlayer1] = useState('');
     const [player2, handlePlayer2] = useState('');
@@ -34,6 +36,10 @@ const Battle = ({theme}) => {
             handleSubmit2(false);
             handlePlayer2('');
         }
+    }
+
+    const playerData = () => {
+        handlePlayersData(user1Data, user2Data);
     }
 
     const getUserData = (num) => {
@@ -90,7 +96,10 @@ const Battle = ({theme}) => {
                 }
             </div>
 
-            {(submit1===true && submit2===true) && <button className="battle-button">Battle</button>}
+            {(submit1===true && submit2===true) && 
+            <Link to="/battle/result">
+                <button className="battle-button" onClick={playerData}>Battle</button>
+            </Link>}
 
         </div>
     )

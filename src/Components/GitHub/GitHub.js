@@ -13,6 +13,32 @@ const GitHub = {
         })
     },
 
+    getUserRepos(user) {
+        let url = `http://api.github.com/users/${user}/repos?client_id=${client_id}&client_secret=${client_secret}&per_page=100&order=asc&sort=updated`;
+
+        return new Promise((resolve, reject) => {
+            fetch(url)
+            .then(res => res.json())
+            .then(data => resolve(data))
+            .catch(err => reject(err))
+        })
+    },
+
+    async getUserScore(user) {
+        let data, score=0;
+        await this.getUserRepos(user)
+        .then(res => data = res)
+        data.forEach(item => {
+                    score += item.stargazers_count
+                });
+        return score;
+        // .then(() => {
+        //     data.forEach(item => {
+        //         score += item.stargazers_count
+        //     });
+        // })
+    },
+
     getRepoData(searchTerm) {
         let url2 = (searchTerm === 'All' ? `https://api.github.com/search/repositories?q=stars:%3E1+&sort=stars&order=desc&type=Repositories
         &client_id=${client_id}&client_secret=${client_secret}` : `https://api.github.com/search/repositories?q=stars:%3E1+language:${searchTerm}&sort=stars&order=desc&type=Repositories&client_id=${client_id}&client_secret=${client_secret}`)
