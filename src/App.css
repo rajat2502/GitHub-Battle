@@ -104,6 +104,10 @@ body {
     font-size: 1rem;
 }
 
+.repo-card a:hover {
+    text-decoration: none;
+}
+
 .repo-data p {
     margin-bottom: 5px;
     font-size: 1rem;
@@ -115,10 +119,136 @@ body {
     margin: auto;
 }
 
+.instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.instuct-svg {
+    margin: 10px;
+    width: 225px;
+    height: 225px;
+    padding: 24px;
+    background: #e7e7e7;
+}   
+
+.instructions > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+}
+
+.instructions > div h3 {
+    font-size: 1.3rem;
+    margin-bottom: 2px;
+}
+
+.input-players {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.input-players form {
+    margin-top: 20px;
+}
+
+.Dark input, .Dark button {
+    color: white; 
+}
+
+.Dark button:disabled {
+    color: gray;
+}
+
+.input-players input, .input-players button {
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background: inherit;
+    margin-top: 10px;
+}
+
+.input-players input {
+    margin-right: 5px;
+    padding: 4px 6px;
+    width: 260px;
+}
+
+.input-players input:focus {
+    outline: none;
+}
+
+.input-players button {
+    padding: 4px 12px;
+    width: 85px;
+}
+
+.battle-players {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 340px;
+    padding: 7px 10px;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.battle-players img {
+    border-radius: 50%;
+    height: 72px;
+    margin-right: 12px;
+}
+
+.battle-players a:hover {
+    text-decoration: none;
+}
+
+.battle-players > span {
+    background: rgb(95, 95, 95);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+}
+
+.battle-button {
+    display: flex;
+    padding: 2px 14px;
+    margin: 20px auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    background: inherit;
+}
+
+.battle-button:focus {
+    outline: none;
+}
+
 .footer {
     display: flex;
     justify-content: center;
     padding: 10px;
+    margin-top: 20px;
 }
 
 .footer a:hover {

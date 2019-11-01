@@ -27,7 +27,7 @@ const App = () => {
               <NavBar handleTheme={toggleIt} theme={theme}/>
               <Switch>
                 <Route path="/" exact render={() => <Popular theme={theme==='Dark'?'bg-dark':''} />}  />
-                <Route path="/battle" component={Battle} />
+                <Route path="/battle" render={() => <Battle theme={theme==='Dark'?'bg-dark':''} />} />
               </Switch>
               <Footer />
         </Router>
