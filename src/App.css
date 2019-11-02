@@ -149,7 +149,7 @@ body {
 }
 
 .input-players {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -202,6 +202,8 @@ body {
     padding: 7px 10px;
     font-size: 1.4rem;
     position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .battle-players img {
@@ -228,6 +230,19 @@ body {
     align-items: center;
     position: absolute;
     right: 10px;
+}
+
+.lets-battle {
+    display: flex;
+    justify-content: center;
+}
+
+.lets-battle a{
+    display: inline-block;
+}
+
+.lets-battle a:hover {
+    text-decoration: none;
 }
 
 .battle-button {
@@ -258,7 +273,7 @@ body {
     padding: 35px 50px;
     border-radius: 10px;
     margin-top: 20px;
-    width: 300px;
+    width: 286px;
 }
 
 .player-result {

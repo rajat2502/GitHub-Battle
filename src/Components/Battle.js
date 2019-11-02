@@ -53,7 +53,7 @@ const Battle = ({theme, handlePlayersData}) => {
 
             <Instructions theme={theme} />
             
-            <h3 className="text-center mt-5">Players</h3>
+            <h3 className="text-center mt-5 font-weight-bolder">Players</h3>
 
             <div className="input-players">
                 {
@@ -96,10 +96,12 @@ const Battle = ({theme, handlePlayersData}) => {
                 }
             </div>
 
-            {(submit1===true && submit2===true) && 
-            <Link to="/battle/result">
-                <button className="battle-button" onClick={playerData}>Battle</button>
-            </Link>}
+            <div className="lets-battle">
+                {(submit1===true && submit2===true) && 
+                <Link to="/battle/result">
+                    <button className="battle-button" onClick={playerData}>Battle</button>
+                </Link>}
+            </div>
 
         </div>
     )

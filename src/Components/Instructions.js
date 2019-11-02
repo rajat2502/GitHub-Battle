@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 const Instructions = ({theme}) => {
     return (
         <Fragment>
-            <h1 className="text-center mt-4">Instructions</h1>
+            <h1 className="text-center mt-4 font-weight-bolder">Instructions</h1>
             <div className="instructions">
                 <div>
                     <h3>Enter Two GitHub Users</h3>

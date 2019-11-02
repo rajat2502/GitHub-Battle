@@ -41,13 +41,13 @@ const Result = ({data1, data2, theme}) => {
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512" size="22" color="rgb(144, 116, 255)" height="22" width="22" style={{color: 'rgb(144, 116, 255)'}}>
                             <path d="M225.38 233.37c-12.5 12.5-12.5 32.76 0 45.25 12.49 12.5 32.76 12.5 45.25 0 12.5-12.5 12.5-32.76 0-45.25-12.5-12.49-32.76-12.49-45.25 0zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm126.14 148.05L308.17 300.4a31.938 31.938 0 0 1-15.77 15.77l-144.34 65.97c-16.65 7.61-33.81-9.55-26.2-26.2l65.98-144.35a31.938 31.938 0 0 1 15.77-15.77l144.34-65.97c16.65-7.6 33.8 9.55 26.19 26.2z"></path>
                         </svg>
-                        {data1.location}
+                        {data1.location ? data1.location : 'nil'}
                     </p> 
                     <p>
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" size="22" color="#795548" height="22" width="22" style={{color: 'rgb(121, 85, 72)'}}>
                             <path d="M320 336c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-48H0v144c0 25.6 22.4 48 48 48h416c25.6 0 48-22.4 48-48V288H320v48zm144-208h-80V80c0-25.6-22.4-48-48-48H176c-25.6 0-48 22.4-48 48v48H48c-25.6 0-48 22.4-48 48v80h512v-80c0-25.6-22.4-48-48-48zm-144 0H192V96h128v32z"></path>
                         </svg>
-                        {data1.company}
+                        {data1.company ? data1.company : 'nil'}
                     </p> 
                     <p>
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 640 512" color="rgb(129, 195, 245)" size="22" height="22" width="22" style={{color: 'rgb(129, 195, 245)'}}>
@@ -84,13 +84,13 @@ const Result = ({data1, data2, theme}) => {
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512" size="22" color="rgb(144, 116, 255)" height="22" width="22" style={{color: 'rgb(144, 116, 255)'}}>
                             <path d="M225.38 233.37c-12.5 12.5-12.5 32.76 0 45.25 12.49 12.5 32.76 12.5 45.25 0 12.5-12.5 12.5-32.76 0-45.25-12.5-12.49-32.76-12.49-45.25 0zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm126.14 148.05L308.17 300.4a31.938 31.938 0 0 1-15.77 15.77l-144.34 65.97c-16.65 7.61-33.81-9.55-26.2-26.2l65.98-144.35a31.938 31.938 0 0 1 15.77-15.77l144.34-65.97c16.65-7.6 33.8 9.55 26.19 26.2z"></path>
                         </svg>
-                        {data2.location}
+                        {data2.location ? data2.location : 'nil'}
                     </p> 
                     <p>
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" size="22" color="#795548" height="22" width="22" style={{color: 'rgb(121, 85, 72)'}}>
                             <path d="M320 336c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-48H0v144c0 25.6 22.4 48 48 48h416c25.6 0 48-22.4 48-48V288H320v48zm144-208h-80V80c0-25.6-22.4-48-48-48H176c-25.6 0-48 22.4-48 48v48H48c-25.6 0-48 22.4-48 48v80h512v-80c0-25.6-22.4-48-48-48zm-144 0H192V96h128v32z"></path>
                         </svg>
-                        {data2.company}
+                        {data2.company ? data2.company : 'nil'}
                     </p> 
                     <p>
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 640 512" color="rgb(129, 195, 245)" size="22" height="22" width="22" style={{color: 'rgb(129, 195, 245)'}}>
