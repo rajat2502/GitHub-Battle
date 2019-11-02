@@ -7,6 +7,7 @@ const Popular = ({theme}) => {
 
     const [selected, handleSelected] = useState('All');
     const [repoData, setRepoData] = useState([]);
+    const [message, setMessage] = useState('Fetching Data...');
 
     const arr = ['All', 'Javascript', 'Python', 'Java', 'Ruby', 'CSS'];
 
@@ -17,8 +18,10 @@ const Popular = ({theme}) => {
     }
 
     const getReposData = (searchTerm) => {
+        setMessage('Fetching Data...');
         GitHub.getRepoData(searchTerm)
-        .then(response => setRepoData(response.items));
+        .then(response => setRepoData(response.items))
+        .then(() => setMessage(''));
     } 
 
     useEffect(() => {
@@ -37,7 +40,7 @@ const Popular = ({theme}) => {
             </ul>
 
             <div className="popular-cards">
-                {repoData.length === 0 ? <div className="fetching">Fetching Data...</div> : repoData.map((item, index) => {
+                {message === 'Fetching Data...' ? <div className="fetching">Fetching Data...</div> : repoData.map((item, index) => {
                     return (
                         <Card key={index} data={item} theme={theme} />
                     )
