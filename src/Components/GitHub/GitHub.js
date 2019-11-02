@@ -14,7 +14,7 @@ const GitHub = {
     },
 
     getUserRepos(user) {
-        let url = `http://api.github.com/users/${user}/repos?client_id=${client_id}&client_secret=${client_secret}&per_page=100&order=asc&sort=updated`;
+        let url = `https://api.github.com/users/${user}/repos?client_id=${client_id}&client_secret=${client_secret}&per_page=100&order=asc&sort=updated`;
 
         return new Promise((resolve, reject) => {
             fetch(url)
@@ -32,11 +32,6 @@ const GitHub = {
                     score += item.stargazers_count
                 });
         return score;
-        // .then(() => {
-        //     data.forEach(item => {
-        //         score += item.stargazers_count
-        //     });
-        // })
     },
 
     getRepoData(searchTerm) {
