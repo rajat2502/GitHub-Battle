@@ -19,7 +19,7 @@ A simple app that lists 30 of the most popular repositories of a language (overa
   
      `git clone https://github.com/rajat2502/GitHub-Battle`
 
-2. cd into Events-Console
+2. cd into GitHub-Battle
   
       `cd GitHub-Battle`
       
