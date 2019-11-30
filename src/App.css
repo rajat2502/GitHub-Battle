@@ -320,10 +320,13 @@ body {
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin-top: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: salmon;
+    color: white;
+    text-align: center;
 }
 
 .footer a:hover {

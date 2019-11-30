@@ -38,7 +38,7 @@ const App = () => {
                 <Route path="/battle" exact render={() => <Battle theme={theme==='Dark'?'bg-dark':''} handlePlayersData={handlePlayersData} />} />
                 <Route path="/battle/result" exact render={() => <Result data1={player1Data} data2={player2Data} theme={theme==='Dark'?'bg-dark':''} />} />
               </Switch>
-              <Footer />
+              <Footer className="footer"/>
         </Router>
       </div>
     </div>

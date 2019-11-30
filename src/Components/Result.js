@@ -27,7 +27,7 @@ const Result = ({data1, data2, theme}) => {
         return (
             <div className="results">
                 <div className={`player-card ${theme}`}>
-                    <h2 className="player-result">{score1 > score2 ? 'Winner🥳' : (score1 == score2 ? 'Tie🙂' : 'Loser🙁')}</h2>
+                    <h2 className="player-result">{score1 > score2 ? 'Winner🥳' : (score1 === score2 ? 'Tie🙂' : 'Loser🙁')}</h2>
                     <img src={data1.avatar_url} alt={`${data1.login}'s avatar`} />
                     <span className="score text-center">score: <span>{score1}</span></span>
                     <a href={data1.html_url} className="player-login text-center">{data1.login}</a>
@@ -70,7 +70,7 @@ const Result = ({data1, data2, theme}) => {
                 </div> 
                 
                 <div className={`player-card ${theme}`}>
-                    <h2 className="player-result">{score1 < score2 ? 'Winner🥳' : (score1 == score2 ? 'Tie🙂' : 'Loser🙁')}</h2>
+                    <h2 className="player-result">{score1 < score2 ? 'Winner🥳' : (score1 === score2 ? 'Tie🙂' : 'Loser🙁')}</h2>
                     <img src={data2.avatar_url} alt={`${data2.login}'s avatar`} />
                     <span className="score text-center">score: <span>{score2}</span></span>
                     <a href={data2.html_url} className="player-login text-center">{data2.login}</a>
