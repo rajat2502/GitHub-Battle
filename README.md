@@ -1,16 +1,16 @@
 # GitHub-Battle
 
-A simple app that lists 30 of the most popular repositories of a language (overall also). It also lets you battle between any two GitHub users.
+A Web-App that lists 30 of the most popular repositories of a language (overall also). It also lets you battle between any two GitHub users.
 
 ### Features :
  1. Lists 30 of the most popular GitHub repositories in a language.
- 2. Battle two github users.
+ 2. Battle any two GitHub users.
  
 ### Technologies Used :
   * React-JS
   * React Router
   * React Hooks
-  * GitHub API
+  * GitHub's API
   * Netlify.com (for hosting)
   
 ### How to Run Locally :
