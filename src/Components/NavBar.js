@@ -25,16 +25,11 @@ const NavBar = ({ handleTheme, theme }) => {
                 })
             }
         </Nav>
-       <aside>
-       <dark-mode-toggle
-           id="dark-mode-toggle-1"
-           legend="Theme Switcher"
-           appearance="switch"
-           dark="Dark"
-           light="Light"
-           remember="Remember this">
-           </dark-mode-toggle>
-           </aside>
+        <div mr="2" onClick={handleTheme}>
+            <p className="emoji" title="Theme">{theme === "Light" ? "🌚" : "🌞"}</p>
+        </div>
+  
+  
       </Navbar>
     </Fragment>
   );
