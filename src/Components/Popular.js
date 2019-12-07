@@ -9,7 +9,7 @@ const Popular = ({theme}) => {
     const [repoData, setRepoData] = useState([]);
     const [message, setMessage] = useState('Fetching Data...');
 
-    const arr = ['All', 'Javascript', 'Python', 'Java', 'Ruby', 'CSS'];
+    const arr = ['All | ', 'Javascript | ', 'Python |', 'Java |', 'Ruby |', 'CSS |'];
 
     const toggleSelected = (e) => {
         handleSelected(e.target.textContent);

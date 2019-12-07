@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from  "react-router-dom";
-
+import * as DarkModeToggle from 'https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle,mjs';
 import './App.css';
 import Popular from './Components/Popular';
 import NavBar from './Components/NavBar';
@@ -16,7 +16,7 @@ const App = () => {
 
   const toggleIt = () => {
     if(theme === 'Light') {
-        toggleTheme('Dark')
+        toggleTheme('Dark');
     }
     else {
         toggleTheme('Light');
