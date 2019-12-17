@@ -9,7 +9,7 @@ class Profile extends React.Component {
         }
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = e => {
         e.preventDefault();
         console.log(e.target.value);
         this.setState({
@@ -20,7 +20,7 @@ class Profile extends React.Component {
         e.preventDefault();
         GitHub.getUserData(this.state.userName)
         .then(res => console.log(res));
-        
+
         console.log("SUbmit");
     }
 
@@ -36,8 +36,9 @@ class Profile extends React.Component {
                         onChange={this.handleSubmit}
                         placeholder="Enter GitHub username"
                         />
-                    <button type="submit">Submit</button>
+                    <button type="submit" disabled={this.state.userName.length > 0 ? false : true}>Submit</button>
                 </form>
+
             </div>
         );
     }
