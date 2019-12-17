@@ -7,6 +7,7 @@ import NavBar from './Components/NavBar';
 import Battle from './Components/Battle';
 import Result from './Components/Result';
 import Footer from './Components/Footer';
+import Profile from './Components/Profile'; // for individual profile section
 
 const App = () => {
 
@@ -37,6 +38,7 @@ const App = () => {
                 <Route path="/" exact render={() => <Popular theme={theme==='Dark'?'bg-dark':''} />}  />
                 <Route path="/battle" exact render={() => <Battle theme={theme==='Dark'?'bg-dark':''} handlePlayersData={handlePlayersData} />} />
                 <Route path="/battle/result" exact render={() => <Result data1={player1Data} data2={player2Data} theme={theme==='Dark'?'bg-dark':''} />} />
+                <Route path="/profile" exact render={() => <Profile theme={theme==='Dark'?'bg-dark':''} />} />
               </Switch>
               <Footer />
         </Router>
