@@ -15,11 +15,11 @@ const Result = ({data1, data2, theme}) => {
         .then(score => setScore2(score+(data2.followers*3)));
     }, [])
 
-    if(data1.login == null || data2.login == null) {
+    if(data1.login === null || data2.login === null) {
         return <h3 className="text-center mt-4">Please Enter Valid Github Users</h3>
     }
 
-    else if(score1==null || score2==null) {
+    else if(score1===null || score2===null) {
         return <h3 className="text-center mt-4">Battling...</h3>
     }
 
