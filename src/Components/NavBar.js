@@ -7,7 +7,7 @@ const NavBar = ({ handleTheme, theme }) => {
 
   const [selected, toggleSelected] = useState('Popular');
     
-  const arr = ['Popular', 'Battle'];
+  const arr = ['Popular', 'Battle', 'Profile'];
 
   return (    
     <Fragment>
@@ -16,14 +16,16 @@ const NavBar = ({ handleTheme, theme }) => {
             {
                 arr.map((item, index) => {
                     return (
-                        <Link to={item === 'Popular' ? '/' : '/battle'} key={index}>
+                        <Link to={item === 'Popular' ? '/' : item === 'Battle' ? '/battle' : '/profile'} key={index}>
                             <NavItem>
                                 <span className={selected === item ? 'selected' : ''} onClick={(e) => toggleSelected(e.target.textContent)} title={item}>{item}</span>
                             </NavItem>
-                        </Link>  
+                        </Link>
                     )
                 })
+                
             }
+
         </Nav>
         <div mr="2" onClick={handleTheme}>
             <p className="emoji" title="Theme">{theme === "Light" ? "🌚" : "🌞"}</p>
