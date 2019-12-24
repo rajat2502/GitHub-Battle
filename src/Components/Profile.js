@@ -1,6 +1,7 @@
 import React from 'react';
 import GitHub from './GitHub/GitHub';
-import Card from './RepoCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faEnvelope, faQuoteLeft, faFolderOpen, faUser, faPray } from '@fortawesome/free-solid-svg-icons';
 
 class Profile extends React.Component {
     constructor(){
@@ -21,6 +22,7 @@ class Profile extends React.Component {
     }
     sendData = e => {
         e.preventDefault();
+        // Github comnponent returns a promise
         GitHub.getUserData(this.state.userName)
         .then(res => {
             this.setState({
@@ -36,7 +38,8 @@ class Profile extends React.Component {
     return (
             <div>
                 <br/><h1>Welcome to the Profile Section</h1><br/>
-                <form onSubmit={this.sendData} className="form1">
+                
+                <form onSubmit={this.sendData} className="form">
                     <input 
                         type="text"
                         value={this.state.userName}
@@ -50,12 +53,12 @@ class Profile extends React.Component {
                         <img src={this.state.data.avatar_url} alt= "Owner Avatar" />
                         <a href={this.state.data.html_url}>{this.state.data.login}</a>
                         <div className="repo-data">
-                            <p><span role="img" aria-label="Admin">👤</span> {this.state.data.name}</p>
-                            <p><span role="img" aria-label="Admin">📧</span> {this.state.data.email}</p>
-                            <p><span role="img" aria-label="Admin">Bio: </span> {this.state.data.bio}</p>
-                            <p><span role="img" aria-label="Admin">🙋‍♂️ Followers: </span> {this.state.data.followers}</p>
-                            <p><span role="img" aria-label="Admin">🚶‍♂️ Following: </span> {this.state.data.following}</p>
-                            <p><span role="img" aria-label="Admin">🗂 Repositories: </span> {this.state.data.public_repos}</p>
+                            <p><FontAwesomeIcon icon={faUser} /> {this.state.data.name}</p>
+                            <p><FontAwesomeIcon icon={faEnvelope} /> {this.state.data.email}</p>
+                            <p><FontAwesomeIcon icon={faQuoteLeft} /> {this.state.data.bio}</p>
+                            <p><FontAwesomeIcon icon={faUsers} /> Followers: {this.state.data.followers}</p>
+                            <p><FontAwesomeIcon icon={faPray} /> Following: {this.state.data.following}</p>
+                            <p><FontAwesomeIcon icon={faFolderOpen} /> {this.state.data.public_repos}</p>
                             
                         </div>
                      </div>
