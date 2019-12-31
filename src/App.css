@@ -320,10 +320,15 @@ body {
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 92.5%;
     margin-top: 20px;
+    margin-left: 0px;
+    background-color: rgb(147, 147, 250);
+    font-size: 1.4rem;
+    border-top: 1px solid rgb(17, 18, 19);
 }
 
 .footer a:hover {

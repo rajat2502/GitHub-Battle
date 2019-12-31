@@ -28,7 +28,7 @@ const App = () => {
     setPlayer2Data(data2);
   }
 
-  return (
+return (
     <div className={`main ${theme}`}>
       <div className="App">
         <Router>
@@ -38,11 +38,10 @@ const App = () => {
                 <Route path="/battle" exact render={() => <Battle theme={theme==='Dark'?'bg-dark':''} handlePlayersData={handlePlayersData} />} />
                 <Route path="/battle/result" exact render={() => <Result data1={player1Data} data2={player2Data} theme={theme==='Dark'?'bg-dark':''} />} />
               </Switch>
-              <Footer />
         </Router>
       </div>
+      <div><Footer /></div>
     </div>
   );
 }
-
 export default App;
