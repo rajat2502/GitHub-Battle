@@ -1,7 +1,6 @@
 import React from 'react';
 import GitHub from './GitHub/GitHub';
 import "./profile.css";
-
 class Profile extends React.Component {
   constructor() {
     super();
@@ -29,6 +28,7 @@ class Profile extends React.Component {
       console.log(this.state.data);
     });
   };
+
   render() {
     return (
       <div>
