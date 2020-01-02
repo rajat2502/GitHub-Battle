@@ -55,7 +55,7 @@ Open [Github Battle](https://github-battlereact.netlify.com/) in any browser of 
 
 ## Contributing
 
-Want to help? Awesome! We are always thrilled to receive pull requests, and do our best to process them as fast as possible. Not sure if that typo is worth a pull request? Do it! We will appreciate it.
+Want to help? Awesome! We are always thrilled to receive [pull-requests](https://github.com/rajat2502/GitHub-Battle/pulls), and do our best to process them as fast as possible. Not sure if that typo is worth a pull request? Do it! We will appreciate it.
 
-If your pull request is not accepted on the first try, don't be discouraged! If there's a problem with the implementation, hopefully you received feedback on what to improve.
+If your [pull-request](https://github.com/rajat2502/GitHub-Battle/pulls) is not accepted on the first try, don't be discouraged! If there's a problem with the implementation, hopefully you received feedback on what to improve.
 
