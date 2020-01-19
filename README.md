@@ -20,6 +20,12 @@ Open [Github Battle](https://github-battlereact.netlify.com/) in any browser of 
   * GitHub's API
   * Netlify.com (for hosting)
 ```
+### Languages Used :
+``` 
+  * Javascript
+  * HTML
+  * CSS
+```
   
 ### How to Run Locally :
 
